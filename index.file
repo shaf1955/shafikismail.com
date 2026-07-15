@@ -1,10 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Shafik Ismail</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Computer Repair & Tech Help for Seniors | Shafik Ismail</title>
+    <style>
+        :root {
+            --primary: #2c5e4e;   /* Warm, gentle green */
+            --accent: #d4af37;    /* Warm gold */
+            --light-bg: #fdfbf7;  /* Soft warm cream background */
+            --card-bg: #ffffff;
+            --text-dark: #2d312e;
+            --text-muted: #5a625d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Georgia, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Navigation Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .header-phone {
+            background-color: var(--accent);
+            color: #000;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: sans-serif;
+            transition: transform 0.2s;
+        }
+        .header-phone:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background: linear-gradient(rgba(44, 94, 78, 0.85), rgba(44, 94, 78, 0.85)), 
+                        url('https://images.unsplash.com/photo-1581579438747-1dc8d1e2e990?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 5rem 1.5rem;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            color: #e2ede8;
+            font-family: sans-serif;
+        }
+        .btn-call {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #111;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            font-family: sans-serif;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Side-by-Side Content Block (Boho Style) */
+        .feature-block {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            margin-bottom: 2.5rem;
+            border-left: 6px solid var(--primary);
+        }
+        @media (max-width: 768px) {
+            .feature-block { flex-direction: column; text-align: center; }
+            header { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+        .feature-text h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+        .feature-text p {
+            font-family: sans-serif;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Services List Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .service-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border: 1px solid #eae6df;
+            font-family: sans-serif;
+        }
+        .service-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        /* Bridge Tutorials Highlight Box */
+        .bridge-banner {
+            background-color: #eaf2ee;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .bridge-banner h2 { color: var(--primary); margin-top: 0; }
+        .bridge-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin-top: 1rem;
+        }
+
+        /* Contact Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+        }
+        footer h2 { margin-top: 0; font-weight: normal; }
+        .phone-link {
+            color: var(--accent);
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            margin: 1rem 0;
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Shafik Ismail's Main Website</h1>
-    <p>Site under construction.</p>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">Shafik Ismail</div>
+        <a href="tel:4406239177" class="header-phone">📞 Call: 440-623-9177</a>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Free Computer Repairs & Support for Seniors</h1>
+        <p>Patient, friendly, and completely free technical help to keep you connected with family, friends, and the world.</p>
+        <a href="tel:4406239177" class="btn-call">Call Shafik: 440-623-9177</a>
+    </section>
+
+    <div class="container">
+
+        <!-- Intro Block -->
+        <div class="feature-block">
+            <div class="feature-text">
+                <h2>Dedicated Tech Help You Can Trust</h2>
+                <p>Hello! My name is <strong>Shafik Ismail</strong>. Technology should make life easier, not more frustrating. I offer free assistance to senior citizens who need help fixing, cleaning up, or learning how to use their computers and laptops.</p>
+                <p>Whether your computer has slowed down, won't turn on, or you just need help setting up email, I'm here to help with patience and care.</p>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <h2 style="text-align: center; color: var(--primary); font-size: 2rem;">How I Can Help You</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>💻 Computer Repair & Cleanup</h3>
+                <p>Fixing slow performance, removing unwanted pop-ups or viruses, and getting your PC running smoothly again.</p>
+            </div>
+            <div class="service-card">
+                <h3>🌐 Internet & Email Setup</h3>
+                <p>Help with setting up Wi-Fi, recovering forgotten email passwords, and configuring Zoom or video calling with family.</p>
+            </div>
+            <div class="service-card">
+                <h3>🛡️ Safety & Security</h3>
+                <p>Ensuring your computer is safe from online scams, updating your security software, and backing up important photos.</p>
+            </div>
+        </div>
+
+        <!-- Bridge Card Game Link -->
+        <div class="bridge-banner">
+            <h2>Love Card Games?</h2>
+            <p style="font-family: sans-serif; color: #444;">Check out my free video tutorial series on how to learn and master <strong>Bridge The Card Game</strong>!</p>
+            <a href="https://bridgethecardgame.shafikismail.com" class="bridge-btn">Watch Bridge Video Tutorials ↗</a>
+        </div>
+
+    </div>
+
+    <!-- Contact Footer -->
+    <footer>
+        <h2>Need Help With Your Computer?</h2>
+        <p style="font-family: sans-serif; color: #d0e0d8;">Give me a call today—no question is too small!</p>
+        <a href="tel:4406239177" class="phone-link">440-623-9177</a>
+        <p style="font-family: sans-serif; font-size: 0.9rem; color: #a0c0b0; margin-top: 2rem;">&copy; Shafik Ismail. Free Community Tech Assistance for Seniors.</p>
+    </footer>
+
 </body>
 </html>
